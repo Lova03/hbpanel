@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  overflow: hidden;
+  background-color: rgb(24, 24, 27);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(35, 35, 38);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(64, 64, 69);
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(83, 83, 88);
+}
+
+::-moz-scrollbar-button:decrement,
+::-moz-scrollbar-button:increment,
+::-webkit-scrollbar-button:decrement,
+::-webkit-scrollbar-button:increment {
+  width: 0px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+@layer components {
+  .loginopt {
+    @apply w-5/6 max-w-[16rem] py-4 border-solid border-2 border-sky-700/50 bg-sky-700/30 text-xl font-main rounded-md cursor-pointer flex items-center justify-center transition-all duration-150 hover:bg-sky-700 hover:border-sky-700;
+  }
+  .navitem {
+    @apply h-8 sm:h-12 flex relative space-x-4 items-center justify-between;
+  }
+  .navitem-icon {
+    @apply h-8 sm:h-12 w-8 sm:w-12 flex relative items-center justify-center cursor-pointer group-hover:bg-cyan-500/80;
+  }
+  .navitem-text {
+    @apply absolute items-center h-8 sm:h-12 w-44 sm:w-52 pl-2 left-4 sm:pl-4 sm:left-8 transition-all duration-100 cursor-pointer group-hover:bg-zinc-900/40;
+  }
+  .userpanelitem {
+    @apply flex items-center h-9 px-2 space-x-2 cursor-pointer transition-all duration-200 hover:text-sky-800; /*hover:bg-[#1F1F22]*/
+  }
+}
